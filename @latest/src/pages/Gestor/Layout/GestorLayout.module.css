@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1a237e; /* Azul Marinho (Sério/Gov) */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid #3949ab;
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 4px;
+}
+
+.sidebar li:hover {
+  background-color: #3949ab;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.btnSair {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pageBody {
+  padding: 30px;
+  overflow-y: auto;
+}
