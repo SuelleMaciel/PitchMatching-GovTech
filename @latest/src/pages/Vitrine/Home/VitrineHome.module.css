@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  background-color: var(--cor-primaria);
+  color: var(--cor-superficie);
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.titulo {
+  color: var(--cor-superficie);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.buscaContainer {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+.inputBusca {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: var(--borda-raio-md);
+  border: none;
+  font-size: 1rem;
+}
+
+.botaoBusca {
+  background-color: var(--cor-secundaria);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--borda-raio-md);
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.botaoBusca:hover {
+  opacity: 0.9;
+}
+
+/* --- Conteúdo Principal --- */
+.conteudo {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Filtros Falsos (Mock) --- */
+.filtrosMock {
+  background-color: var(--cor-superficie);
+  padding: 15px 20px;
+  border-radius: var(--borda-raio-md);
+  box-shadow: var(--sombra-card);
+  color: var(--cor-texto-secundario);
+}
+
+/* --- Grid de Cards Falsos (Mock) --- */
+.gridMock {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cardMock {
+  background-color: var(--cor-superficie);
+  padding: 20px;
+  border-radius: var(--borda-raio-md);
+  box-shadow: var(--sombra-card);
+  border: 1px dashed var(--cor-borda);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.badgeSaude, .badgeEducacao, .badgeMeioAmbiente {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: var(--borda-raio-sm);
+  color: white;
+}
+
+.badgeSaude { background-color: #e53e3e; }
+.badgeEducacao { background-color: #d69e2e; }
+.badgeMeioAmbiente { background-color: #38a169; }
