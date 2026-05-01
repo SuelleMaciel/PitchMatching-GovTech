@@ -1,0 +1,79 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; 
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.content {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 30px; 
+  flex-grow: 1; 
+}
+
+.content p {
+  margin: 4px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.btnSecondary {
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btnSecondary:hover {
+  background-color: #f9fafb;
+}
+
+.btnPrimary {
+  background-color: #152e65;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.8;
+}
