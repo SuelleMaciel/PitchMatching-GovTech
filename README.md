@@ -31,4 +31,3 @@ A plataforma foi desenhada para operacionalizar a "demanda puxada" através de i
 ## Segurança e Tecnologia
 * Conformidade com a **LGPD** (Lei Geral de Proteção de Dados) desde a concepção.
 * Desenvolvimento baseado na síntese de conhecimentos de ciência da informação, gestão da inovação e políticas públicas.
-Pv
