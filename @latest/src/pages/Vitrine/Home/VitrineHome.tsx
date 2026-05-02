@@ -1,44 +1,13 @@
 import styles from './VitrineHome.module.css';
-import { FilterBar } from './Components/FilterBar'
-import { SearchBar } from './Components/SearchBar';
-import { DemandaGrid, type Demanda } from './Components/DemandaGrid'; 
+import { FilterBar } from '../Home/Components/FilterBar'
+import { SearchBar } from '../Home/Components/SearchBar';
+import { DemandaGrid } from '../Home/Components/DemandaGrid';
+
+import { mockDemandas } from '../../../utils/mockDemandas'; 
 
 export function VitrineHome() {
-
-    const listaDeDemandas: Demanda[] = [
-    {
-      id: 1,
-      categoria: "SAÚDE",
-      titulo: "Monitoramento Inteligente de Vacinas",
-      orgao: "Secretaria Municipal de Saúde - São Luís",
-      prazo: 30,
-      valor: 150000
-    },
-    {
-      id: 2,
-      categoria: "EDUCAÇÃO",
-      titulo: "Sistema de Gestão de Merenda Escolar",
-      orgao: "Secretaria Estadual de Educação",
-      prazo: 45,
-      valor: 200000
-    },
-    {
-      id: 3,
-      categoria: "MEIO AMBIENTE",
-      titulo: "Monitoramento de Queimadas em Tempo Real",
-      orgao: "SEMAPA - Imperatriz",
-      prazo: 60,
-      valor: 300000
-    },
-    {
-        id:4,
-        categoria: "SAÚDE",
-        titulo: "Monitoramento de casos de Dengue",
-        orgao: "Secretaria Municipal de Saúde",
-        prazo: 70,
-        valor: 250000
-    }
-  ];
+  
+  const demandasPublicas = mockDemandas.filter(demanda => demanda.status === 'Aberto'); // na vitrine só aparecem os que estão em aberto
 
   return (
     <div className={styles.container}>
@@ -52,7 +21,7 @@ export function VitrineHome() {
 
       <main className={styles.conteudo}>
         <FilterBar />
-        <DemandaGrid demandas={listaDeDemandas} />
+        <DemandaGrid demandas={demandasPublicas} />
       </main>
     </div>
   );

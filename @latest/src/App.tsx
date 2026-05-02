@@ -1,27 +1,48 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Sidebar } from '../src/pages/Vitrine/Home/Components/SideBar.tsx';
-import '../src/assets/global.css'; 
-import { VitrineHome } from './pages/Vitrine/Home/VitrineHome.tsx';
+import './assets/global.css'; 
+
+import { Sidebar } from './pages/Vitrine/Home/Components/SideBar'; 
+import { VitrineHome } from './pages/Vitrine/Home/VitrineHome';
+
+import Login from './pages/Login/Login';
+
+import GestorLayout from './pages/Gestor/Layout/GestorLayout';
+import Dashboard from './pages/Gestor/Dashboard/Dashboard';
+import NovaDemanda from './pages/Gestor/NovaDemanda/NovaDemanda';
 
 function App() {
   return (
     <BrowserRouter>
-      <div style={{ display: 'flex' }}>
-        <Sidebar />
-        <main style={{ marginLeft: '260px', width: '100%', minHeight: '100vh', backgroundColor: '#f9fafb' }}>
-          <Routes>
-            <Route path="/" element={<VitrineHome />} />
-            
-            <Route path="/login" element={
-              <div style={{ padding: '40px' }}>
-                <h1>Página de Login</h1>
-                <p>Aqui entrará o formulário para o Gestor ou Proponente acessar o sistema.</p>
-              </div>
-            } />
-          </Routes>
-        </main>
+      <Routes>
         
-      </div>
+        {/* Vitrine */}
+        <Route path="/" element={
+          <div style={{ display: 'flex' }}>
+            <Sidebar />
+            <main style={{ marginLeft: '260px', width: '100%', minHeight: '100vh', backgroundColor: '#f9fafb' }}>
+              <VitrineHome />
+            </main>
+          </div>
+        } />
+
+        {/* Login */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Pagina do gestor */}
+        <Route path="/gestor" element={
+          <GestorLayout>
+            <Dashboard />
+          </GestorLayout>
+        } />
+
+        {/* Página de nova demanda para o gestor */}
+        <Route path="/gestor/nova-demanda" element={
+          <GestorLayout>
+            <NovaDemanda />
+          </GestorLayout>
+        } />
+
+      </Routes>
     </BrowserRouter>
   );
 }

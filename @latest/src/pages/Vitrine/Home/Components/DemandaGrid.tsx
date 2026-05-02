@@ -1,14 +1,7 @@
 import { CardDemanda } from './CardDemanda';
 import styles from './DemandaGrid.module.css';
 
-export interface Demanda {
-  id: number; 
-  categoria: string;
-  titulo: string;
-  orgao: string;
-  prazo: number;
-  valor: number;
-}
+import { type Demanda } from '../../../../utils/mockDemandas'; 
 
 interface DemandaGridProps {
   demandas: Demanda[];
