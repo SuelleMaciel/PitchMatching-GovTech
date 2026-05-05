@@ -1,7 +1,7 @@
 import styles from './VitrineHome.module.css';
-import { FilterBar } from '../Home/Components/FilterBar'
-import { SearchBar } from '../Home/Components/SearchBar';
-import { DemandaGrid } from '../Home/Components/DemandaGrid';
+import { FilterBar } from './Components/FilterBar'
+import { SearchBar } from './Components/SearchBar';
+import { DemandaGrid } from './Components/DemandaGrid';
 
 import { mockDemandas } from '../../../utils/mockDemandas'; 
 
