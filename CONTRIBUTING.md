@@ -57,3 +57,14 @@ Para o nosso projeto, o Back-end será responsável por criar as rotas que permi
 1.  Clonar o repositório
 2.  Instalar as dependências (se já tiver)
 3.  Crie a sua branch
+
+---
+
+## Para testar
+
+1. Abra a pasta do projeto (PitchMatching-GovTech) pelo vsCode (ou outra IDE) e abra o terminal
+2. Digite <code> cd pitchmatching </code>
+3. Digite <code> npm install </code>
+4. Digite <code> npm install react-router-dom </code>
+5. Digite <code> npm run dev </code>
+6. Clique no link que gera no terminal
